@@ -31,24 +31,16 @@ jobs:
       - image: circleci/python:3.6.4
     steps:
       - checkout
-      - when:
-          condition:
-            and:
-              - equal: [ master, << pipeline.git.branch >> ]
-              - matches:
-                  pattern: "^v.*"
-                  value: << pipeline.git.tag >>
-          steps:
-            - run:
-                name: Install deps
-                command: |
-                  sudo pip install --upgrade pip
-                  sudo pip install --upgrade setuptools wheel twine
-            - run:
-                name: Deploy to PyPI
-                command: |
-                  python setup.py sdist bdist_wheel
-                  twine upload --username __token__ --password $PYPI_TOKEN dist/*
+      - run:
+          name: Install deps
+          command: |
+            sudo pip install --upgrade pip
+            sudo pip install --upgrade setuptools wheel twine
+      - run:
+          name: Deploy to PyPI
+          command: |
+            python setup.py sdist bdist_wheel
+            twine upload --username __token__ --password $PYPI_TOKEN dist/*
 
 workflows:
   build-test-deploy:
@@ -64,7 +56,8 @@ workflows:
             - test
           filters:
             branches:
-              only:
-                - master
+              ignore: /.*/
+            tags:
+              only: /^v.*/
           context:
             - shared
