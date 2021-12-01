@@ -60,8 +60,15 @@ these resources are available **only** if you provide valid credentials.
 * Accounts
 * Transactions
 * Owners
+* Balances
+* Incomes
 * Invoices
 * TaxReturns
 * TaxStatus
+* TaxComplianceStatus
 * Statements
 * WidgetToken
+* RecurringExpenses
+* RiskInsights
+* InvestmentsPortfolios
+* InvestmentsTransactions

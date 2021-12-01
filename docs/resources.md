@@ -1145,3 +1145,144 @@ def create(
     raise_exception: bool = False
 ) -> Union[List[Dict], Dict]:
 ```
+
+## InvestmentsPortfolios
+InvestmentsPortfolios is a comprehensive view of your user's current investment holdings.
+
+### Fetching investments portfolios
+To fetch investments portfolios you will make use of the `.create()` method, the process will
+retrieve all investments portfolios from the bank institution. You **must** 
+provide a `Link`.
+
+**Method:** 
+
+```python
+def create(
+    self, link: str, *, token: str = None, **kwargs: str
+) -> Union[List[Dict], Dict]:
+    ...
+```
+
+**Example:**
+```python
+# Fetch investments portfolios for a Link
+investments_portfolios = client.InvestmentsPortfolios.create("b91835f5-6f83-4d9b-a0ad-a5a249f18b7c")
+```
+
+### Deleting investments portfolios
+An `InvestmentsPortfolio` is persisted into our database after you fetch it, if you want you 
+can delete it at any time.
+
+**Method:**
+```python
+def delete(investments_portfolio: str) -> bool:
+    ...
+```
+
+**Example:**
+```python
+client.InvestmentsPortfolios.delete("161a5e4d-67f5-4760-ae4f-c1fe85cb20ca")
+
+```
+
+### List and filtering
+In order to make easier to find a `InvestmentsPortfolio` (or many of them), it is possible to 
+filter the results.
+
+If no filters are provided, you will get all `InvestmentsPortfolios` that you have registered.
+
+**Method:**
+```python
+def list(**kwargs) -> Generator:
+    ...
+```
+
+**Example:**
+```python
+# Retrieve all investments portfolios (no filter given)
+investments_portfolios = client.InvestmentsPortfolios.list()
+
+# Retrieve investments portfolios for a specific link
+investments_portfolios = client.InvestmentsPortfolios.list(link="b91835f5-6f83-4d9b-a0ad-a5a249f18b7c")
+```
+
+**:warning: Warning:**
+
+The `.list()` method yields a `Generator`, you will have to iterate  over it or
+cast it to `List` or `Tuple`.
+
+
+## Investments Transactions
+Investments transactions are the existing transactions for an instrument. 
+
+### Fetching investments transactions
+To fetch investments transactions you will make use of the `.create()` method, the process will
+retrieve all transaction data available from the bank institution. You **must** 
+provide a `Link` and a date range defined by `date_from` and `date_to`.
+
+**Method:** 
+
+```python
+def create(
+    self,
+    link: str,
+    date_from: str,
+    *,
+    date_to: str = None,
+    token: str = None,
+    **kwargs: str
+) -> Union[List[Dict], Dict]:
+    ...
+```
+
+**Example:**
+```python
+# Fetch investments transactions for a Link
+investments_transactions = client.InvestmentsTransactions.create(
+    "b91835f5-6f83-4d9b-a0ad-a5a249f18b7c",
+    "2019-07-01",
+    date_to="2019-07-31"
+)
+```
+
+### Deleting investments transactions
+A `InvestmentsTransaction` is persisted into our database after you fetch it, if you want you 
+can delete it at any time.
+
+**Method:**
+```python
+def delete(investments_transaction: str) -> bool:
+    ...
+```
+
+**Example:**
+```python
+client.InvestmentsTransactions.delete("b92935e6-fb9a-4c2f-9d7c-3e42165421d6")
+
+```
+
+### List and filtering
+In order to make easier to find a `InvestmentsTransaction` (or many of them), it is possible to 
+filter the results.
+
+If no filters are provided, you will get all `investments transactions` that you have registered.
+
+**Method:**
+```python
+def list(**filters) -> Generator:
+    ...
+```
+
+**Example:**
+```python
+# Retrieve all investments transactions (no filter given)
+investments_transactions = client.InvestmentsTransactions.list()
+
+# Retrieve investments transactions for a specific link
+investments_transactions = client.InvestmentsTransactions.list(link="b91835f5-6f83-4d9b-a0ad-a5a249f18b7c")
+```
+
+**:warning: Warning:**
+
+The `.list()` method yields a `Generator`, you will have to iterate  over it or
+cast it to `List` or `Tuple`.

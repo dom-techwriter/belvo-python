@@ -1,3 +1,5 @@
+from belvo.investments.portfolios import InvestmentsPortfolios  # noqa
+from belvo.investments.transactions import InvestmentsTransactions  # noqa
 from belvo.resources.accounts import Accounts  # noqa
 from belvo.resources.balances import Balances  # noqa
 from belvo.resources.incomes import Incomes  # noqa

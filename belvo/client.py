@@ -35,6 +35,8 @@ class Client:
         self._tax_compliance_status = resources.TaxComplianceStatus(self.session)
         self._statements = resources.Statements(self.session)
         self._widget_token = resources.WidgetToken(self.session)
+        self._investments_portfolios = resources.InvestmentsPortfolios(self.session)
+        self._investments_transactions = resources.InvestmentsTransactions(self.session)
 
     @property
     def Links(self):
@@ -95,3 +97,11 @@ class Client:
     @property
     def WidgetToken(self):
         return self._widget_token
+
+    @property
+    def InvestmentsPortfolios(self):
+        return self._investments_portfolios
+
+    @property
+    def InvestmentsTransactions(self):
+        return self._investments_transactions
