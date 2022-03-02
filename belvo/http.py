@@ -48,10 +48,11 @@ class APISession:
             return False
         return True
 
-    def _get(self, url: str, params: Dict = None, timeout: int = 5) -> Dict:
+    def _get(self, url: str, params: Dict = None) -> Dict:
         if params is None:
             params = {}
 
+        timeout = params.pop("timeout", 5)
         r = self.session.get(url=url, params=params, timeout=timeout)
         r.raise_for_status()
         return r.json()

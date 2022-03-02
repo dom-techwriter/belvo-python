@@ -807,8 +807,8 @@ def list(**filters) -> Generator:
 
 **Example:**
 ```python
-# Retrieve all invoices
-invoices = client.Invoices.list()
+# Retrieve all invoices with a timeout of 60 seconds
+invoices = client.Invoices.list(timeout=60)
 ```
 
 **:warning: Warning:**
