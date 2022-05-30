@@ -27,6 +27,34 @@ class Links(Resource):
         private_key: str = None,
         external_id: str = None,
     ) -> Union[List[Dict], Dict]:
+        """Register a new Link
+
+        Register a new link with your Belvo account. For in-depth information for all the request parameters, please see our [Links API documentation](https://developers.belvo.com/reference/registerlink).
+
+        <div style="background-color:#f4f6f8; border-left: 6px solid #0663F9;padding: 12px;margin-left: 25px; border-radius: 4px; margin-right: 25px">
+        <strong>Info:</strong> We really recommend using our Connect Widget to create links. It'll save you a lot of headaches!.
+        </div>
+
+
+        Args:
+            institution (str): The Belvo name for the institution.
+            username (str): The end-user's username used to log in to the institution.
+            password (str): The end-user's password used to log in to the institution.
+            username2 (str, optional): The end-user's second username used to log in to the institution. Defaults to None.
+            username3 (str, optional): The end-user's third username used to log in to the institution. Defaults to None.
+            password2 (str, optional): The end-user's second password used to log in to the institution. Defaults to None.
+            token (str, optional): The MFA token required by the bank to log in. We do not recommend sending the authentication token in the same request as registering the user. See our Handling multi-factor authentication article for more information and best practices. Defaults to None.
+            save_data (bool, optional): Indicates whether or not to persist the data in Belvo. Defaults to `True`.
+            raise_exception (bool, optional): Indicates whether to raise an exception or return the API error. Defaults to `False`.
+            access_mode (Optional[AccessMode], optional): The type of link to create. Defaults to None.
+            username_type (str, optional): Type of document to be used as a username. Defaults to None.
+            certificate (str, optional): For certain fiscal institutions, it is possible to log in using a certificate and a private key, which enables a faster connection to the institution. Defaults to None.
+            private_key (str, optional): For certain fiscal institutions, it is possible to log in using a certificate and a private key, which enables a faster connection to the institution. Defaults to None.
+            external_id (str, optional): An additional identifier for the link, provided by you, to store in the Belvo database. Defaults to None.
+
+        Returns:
+            Union[List[Dict], Dict]: For more information on the response from the API, see our [Links API documentation](https://developers.belvo.com/reference/registerlink).
+        """
 
         data = {
             "institution": institution,
@@ -61,6 +89,25 @@ class Links(Resource):
         certificate: str = None,
         private_key: str = None,
     ) -> Union[List[Dict], Dict]:
+        """Update a link's credentials
+
+        Update the credentials of a specific link. If the successfully updated link is a recurrent one, we automatically trigger an update of the link. If we find fresh data, you'll receive historical update webhooks.
+
+        Args:
+            link (str): The link.id you want to update.
+            password (str): The end-user's password used to log in to the institution.
+            password2 (str, optional): The end-user's second password used to log in to the institution. Defaults to None.
+            token (str, optional): The MFA token required by the bank to log in. We do not recommend sending the authentication token in the same request as registering the user. See our Handling multi-factor authentication article for more information and best practices. Defaults to None.
+            save_data (bool, optional): Indicates whether or not to persist the data in Belvo. Defaults to `True`.
+            raise_exception (bool, optional): Indicates whether to raise an exception or return the API error. Defaults to `False`.
+            username_type (str, optional): Type of document to be used as a username. Defaults to None.
+            certificate (str, optional): For certain fiscal institutions, it is possible to log in using a certificate and a private key, which enables a faster connection to the institution. Defaults to None.
+            private_key (str, optional): For certain fiscal institutions, it is possible to log in using a certificate and a private key, which enables a faster connection to the institution. Defaults to None.
+
+        Returns:
+            Union[List[Dict], Dict]: For more information on the response from the API, see our [Links API documentation](https://developers.belvo.com/reference/patchlinks).
+        """
+
 
         data = {
             "password": password,
@@ -97,6 +144,16 @@ class Links(Resource):
     def patch(
         self, link: str, *, access_mode: Optional[AccessMode] = None, raise_exception: bool = False
     ) -> Union[List[Dict], Dict]:
+        """Update a link's access_mode
+
+        Args:
+            link (str): The `link.id` you want to update the `access_mode` for (UUID).
+            access_mode (Optional[AccessMode], optional): The new `access_mode` you want to assign to the link. Can be either `single` or `recurrent`. Defaults to None.
+            raise_exception (bool, optional): Indicates whether to raise an exception or return the API error. Defaults to `False`.
+
+        Returns:
+            Dict: The details of the object.
+        """
         data = {"access_mode": access_mode and access_mode.value}
         return self.session.patch(
             f"{self.endpoint}{link}/", data=data, raise_exception=raise_exception

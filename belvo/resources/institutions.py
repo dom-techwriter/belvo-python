@@ -4,6 +4,14 @@ from belvo.resources.base import Resource
 
 
 class Institutions(Resource):
+    """
+        <br>
+        <div style="background-color:#f9c806;padding: 6px; border-radius: 4px">
+        <strong>Not implemented</strong><br>
+        Although included in the SDK, the delete and resume methods for the Institutions resource will raise a <code>NotImplementedError()</code> when used. 
+        </div>
+
+    """
     endpoint = "/api/institutions/"
 
     def delete(self, id: str) -> bool:

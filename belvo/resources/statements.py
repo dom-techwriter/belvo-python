@@ -4,6 +4,13 @@ from belvo.resources.base import Resource
 
 
 class Statements(Resource):
+    """
+    <br>
+    <div style="background-color:#f9c806; border-left: 6px solid #f9c806;padding: 12px;margin-left: 25px; border-radius: 4px; margin-right: 25px">
+    <strong>⚠️ Sunset notice: </strong> The Statements resource is due to be sunsetted on 09.05.2022. After which, we will no longer support the resource and we will remove it from our documentation, API, and SDKs. 
+    </div>
+
+    """
     endpoint = "/api/statements/"
 
     def create(
@@ -18,6 +25,13 @@ class Statements(Resource):
         raise_exception: bool = False,
         **kwargs: Dict,
     ) -> Union[List[Dict], Dict]:
+        """
+        <br>
+        <div style="background-color:#f9c806; border-left: 6px solid #f9c806;padding: 12px;margin-left: 25px; border-radius: 4px; margin-right: 25px">
+        <strong>⚠️ Sunset notice: </strong> The Statements resource is due to be sunsetted on 09.05.2022. After which, we will no longer support the resource and we will remove it from our documentation, API, and SDKs. 
+        </div>
+
+        """
 
         data = {
             "link": link,
