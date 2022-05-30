@@ -1,18 +1,24 @@
-name: Publish docs via GitHub Pages
+name: Build & deploy Python SDK documentation
 on:
   push:
-    tags:
-      - '*'
-
+    branches:
+      - master
 jobs:
   build:
-    name: Deploy docs
     runs-on: ubuntu-latest
+    name: Update gh-pages with docs
     steps:
-      - name: Checkout master
-        uses: actions/checkout@v1
-
-      - name: Deploy docs
-        uses: mhausenblas/mkdocs-deploy-gh-pages@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.MKDOCS_TOKEN }}
+      - name: Checkout Belvo Python SDK repo
+        uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v3
+      - name: Install pdoc dependency
+        run: pip install pdoc
+      - name: Build Python SDK docs with pdoc
+        run: pdoc ./belvo --docformat google -o ./docs
+      - name: Deploy docs to gh-pages branch
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
+          publish_branch: gh-pages
