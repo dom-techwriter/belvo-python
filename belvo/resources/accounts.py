@@ -15,11 +15,9 @@ class Accounts(Resource):
         raise_exception: bool = False,
         **kwargs: Dict,
     ) -> Union[List[Dict], Dict]:
-        """Retrieve accounts for a given link
+        """# Retrieve accounts for a given link
 
-        To fetch accounts you will make use of the .create() method and will retrieve all account data available from the banking or gig institution.
-
-        If the account already exists in our records, only its balance and collected_at will be updated.
+        To fetch all accounts for the banking or gig Link, use the `.create()` method. If the account already exists in our records, we only update the `balance` and `collected_at` parameters.
 
         > For more information detailed information regarding the Accounts resource, check our [Accounts DevPortal documentation](https://developers.belvo.com/reference/accounts-1).
 

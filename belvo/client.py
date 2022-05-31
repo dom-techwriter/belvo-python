@@ -8,7 +8,7 @@ from .http import APISession
 
 class Client:
     def __init__(self, secret_key_id: str, secret_key_password: str, url: str = None) -> None:
-        """Connect to the Belvo API
+        """# Connect to the Belvo API
 
         In order to use Belvo API, you will have to login into a new session by using
         a _secret key_.
