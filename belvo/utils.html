@@ -120,23 +120,14 @@
 
 <p>This helper method is used in the SDK when a provided input needs to be base64 encoded (for example, when providing the certificate and private key to create a fiscal link).</p>
 
-<h6 id="args">Args</h6>
+<p>Args:
+    path (str): The string to read and convert.</p>
 
-<ul>
-<li><strong>path (str):</strong>  The string to read and convert.</li>
-</ul>
+<p>Raises:
+    ValueError: If the provided file is not a string, raises a ValueError.</p>
 
-<h6 id="raises">Raises</h6>
-
-<ul>
-<li><strong>ValueError:</strong>  If the provided file is not a string, raises a ValueError.</li>
-</ul>
-
-<h6 id="returns">Returns</h6>
-
-<blockquote>
-  <p>The string in base64-encoded format.</p>
-</blockquote>
+<p>Returns:
+    The string in base64-encoded format.</p>
 </div>
 
 
