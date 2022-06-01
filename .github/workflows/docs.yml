@@ -3,7 +3,7 @@ name: website
 on:
   push:
     branches:
-      - main
+      - master
 permissions:
   contents: read
 
@@ -18,7 +18,7 @@ jobs:
       - name: Install all dependencies (pdoc + more)
         run: pip install -e .
       - name: Build docs into docs/ folder
-        run: docs/make.py  
+        run: pdoc ./belvo -o docs/
       - run: tar --directory docs/ -hcf artifact.tar .
       - uses: actions/upload-artifact@v3
         with:
