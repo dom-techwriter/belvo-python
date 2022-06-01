@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="pdoc 12.0.0"/>
-    <title>belvo API documentation</title>
+    <title>belvo.resources API documentation</title>
 
     <style>/*! * Bootstrap Reboot v5.0.0 (https://getbootstrap.com/) * Copyright 2011-2021 The Bootstrap Authors * Copyright 2011-2021 Twitter, Inc. * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE) * Forked from Normalize.css, licensed MIT (https://github.com/necolas/normalize.css/blob/master/LICENSE.md) */*,::after,::before{box-sizing:border-box}@media (prefers-reduced-motion:no-preference){:root{scroll-behavior:smooth}}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";font-size:1rem;font-weight:400;line-height:1.5;color:#212529;background-color:#fff;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}hr{margin:1rem 0;color:inherit;background-color:currentColor;border:0;opacity:.25}hr:not([size]){height:1px}h1,h2,h3,h4,h5,h6{margin-top:0;margin-bottom:.5rem;font-weight:500;line-height:1.2}h1{font-size:calc(1.375rem + 1.5vw)}@media (min-width:1200px){h1{font-size:2.5rem}}h2{font-size:calc(1.325rem + .9vw)}@media (min-width:1200px){h2{font-size:2rem}}h3{font-size:calc(1.3rem + .6vw)}@media (min-width:1200px){h3{font-size:1.75rem}}h4{font-size:calc(1.275rem + .3vw)}@media (min-width:1200px){h4{font-size:1.5rem}}h5{font-size:1.25rem}h6{font-size:1rem}p{margin-top:0;margin-bottom:1rem}abbr[data-bs-original-title],abbr[title]{-webkit-text-decoration:underline dotted;text-decoration:underline dotted;cursor:help;-webkit-text-decoration-skip-ink:none;text-decoration-skip-ink:none}address{margin-bottom:1rem;font-style:normal;line-height:inherit}ol,ul{padding-left:2rem}dl,ol,ul{margin-top:0;margin-bottom:1rem}ol ol,ol ul,ul ol,ul ul{margin-bottom:0}dt{font-weight:700}dd{margin-bottom:.5rem;margin-left:0}blockquote{margin:0 0 1rem}b,strong{font-weight:bolder}small{font-size:.875em}mark{padding:.2em;background-color:#fcf8e3}sub,sup{position:relative;font-size:.75em;line-height:0;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}a{color:#0d6efd;text-decoration:underline}a:hover{color:#0a58ca}a:not([href]):not([class]),a:not([href]):not([class]):hover{color:inherit;text-decoration:none}code,kbd,pre,samp{font-family:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;font-size:1em;direction:ltr;unicode-bidi:bidi-override}pre{display:block;margin-top:0;margin-bottom:1rem;overflow:auto;font-size:.875em}pre code{font-size:inherit;color:inherit;word-break:normal}code{font-size:.875em;color:#d63384;word-wrap:break-word}a>code{color:inherit}kbd{padding:.2rem .4rem;font-size:.875em;color:#fff;background-color:#212529;border-radius:.2rem}kbd kbd{padding:0;font-size:1em;font-weight:700}figure{margin:0 0 1rem}img,svg{vertical-align:middle}table{caption-side:bottom;border-collapse:collapse}caption{padding-top:.5rem;padding-bottom:.5rem;color:#6c757d;text-align:left}th{text-align:inherit;text-align:-webkit-match-parent}tbody,td,tfoot,th,thead,tr{border-color:inherit;border-style:solid;border-width:0}label{display:inline-block}button{border-radius:0}button:focus:not(:focus-visible){outline:0}button,input,optgroup,select,textarea{margin:0;font-family:inherit;font-size:inherit;line-height:inherit}button,select{text-transform:none}[role=button]{cursor:pointer}select{word-wrap:normal}select:disabled{opacity:1}[list]::-webkit-calendar-picker-indicator{display:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]:not(:disabled),[type=reset]:not(:disabled),[type=submit]:not(:disabled),button:not(:disabled){cursor:pointer}::-moz-focus-inner{padding:0;border-style:none}textarea{resize:vertical}fieldset{min-width:0;padding:0;margin:0;border:0}legend{float:left;width:100%;padding:0;margin-bottom:.5rem;font-size:calc(1.275rem + .3vw);line-height:inherit}@media (min-width:1200px){legend{font-size:1.5rem}}legend+*{clear:left}::-webkit-datetime-edit-day-field,::-webkit-datetime-edit-fields-wrapper,::-webkit-datetime-edit-hour-field,::-webkit-datetime-edit-minute,::-webkit-datetime-edit-month-field,::-webkit-datetime-edit-text,::-webkit-datetime-edit-year-field{padding:0}::-webkit-inner-spin-button{height:auto}[type=search]{outline-offset:-2px;-webkit-appearance:textfield}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-color-swatch-wrapper{padding:0}::file-selector-button{font:inherit}::-webkit-file-upload-button{font:inherit;-webkit-appearance:button}output{display:inline-block}iframe{border:0}summary{display:list-item;cursor:pointer}progress{vertical-align:baseline}[hidden]{display:none!important}</style>
     <style>/*! syntax-highlighting.css */pre{line-height:125%;}span.linenos{color:inherit; background-color:transparent; padding-left:5px; padding-right:20px;}.pdoc-code .hll{background-color:#ffffcc}.pdoc-code{background:#f8f8f8;}.pdoc-code .c{color:#3D7B7B; font-style:italic}.pdoc-code .err{border:1px solid #FF0000}.pdoc-code .k{color:#008000; font-weight:bold}.pdoc-code .o{color:#666666}.pdoc-code .ch{color:#3D7B7B; font-style:italic}.pdoc-code .cm{color:#3D7B7B; font-style:italic}.pdoc-code .cp{color:#9C6500}.pdoc-code .cpf{color:#3D7B7B; font-style:italic}.pdoc-code .c1{color:#3D7B7B; font-style:italic}.pdoc-code .cs{color:#3D7B7B; font-style:italic}.pdoc-code .gd{color:#A00000}.pdoc-code .ge{font-style:italic}.pdoc-code .gr{color:#E40000}.pdoc-code .gh{color:#000080; font-weight:bold}.pdoc-code .gi{color:#008400}.pdoc-code .go{color:#717171}.pdoc-code .gp{color:#000080; font-weight:bold}.pdoc-code .gs{font-weight:bold}.pdoc-code .gu{color:#800080; font-weight:bold}.pdoc-code .gt{color:#0044DD}.pdoc-code .kc{color:#008000; font-weight:bold}.pdoc-code .kd{color:#008000; font-weight:bold}.pdoc-code .kn{color:#008000; font-weight:bold}.pdoc-code .kp{color:#008000}.pdoc-code .kr{color:#008000; font-weight:bold}.pdoc-code .kt{color:#B00040}.pdoc-code .m{color:#666666}.pdoc-code .s{color:#BA2121}.pdoc-code .na{color:#687822}.pdoc-code .nb{color:#008000}.pdoc-code .nc{color:#0000FF; font-weight:bold}.pdoc-code .no{color:#880000}.pdoc-code .nd{color:#AA22FF}.pdoc-code .ni{color:#717171; font-weight:bold}.pdoc-code .ne{color:#CB3F38; font-weight:bold}.pdoc-code .nf{color:#0000FF}.pdoc-code .nl{color:#767600}.pdoc-code .nn{color:#0000FF; font-weight:bold}.pdoc-code .nt{color:#008000; font-weight:bold}.pdoc-code .nv{color:#19177C}.pdoc-code .ow{color:#AA22FF; font-weight:bold}.pdoc-code .w{color:#bbbbbb}.pdoc-code .mb{color:#666666}.pdoc-code .mf{color:#666666}.pdoc-code .mh{color:#666666}.pdoc-code .mi{color:#666666}.pdoc-code .mo{color:#666666}.pdoc-code .sa{color:#BA2121}.pdoc-code .sb{color:#BA2121}.pdoc-code .sc{color:#BA2121}.pdoc-code .dl{color:#BA2121}.pdoc-code .sd{color:#BA2121; font-style:italic}.pdoc-code .s2{color:#BA2121}.pdoc-code .se{color:#AA5D1F; font-weight:bold}.pdoc-code .sh{color:#BA2121}.pdoc-code .si{color:#A45A77; font-weight:bold}.pdoc-code .sx{color:#008000}.pdoc-code .sr{color:#A45A77}.pdoc-code .s1{color:#BA2121}.pdoc-code .ss{color:#19177C}.pdoc-code .bp{color:#008000}.pdoc-code .fm{color:#0000FF}.pdoc-code .vc{color:#19177C}.pdoc-code .vg{color:#19177C}.pdoc-code .vi{color:#19177C}.pdoc-code .vm{color:#19177C}.pdoc-code .il{color:#666666}</style>
@@ -16,33 +16,35 @@
     <nav class="pdoc">
         <label id="navtoggle" for="togglestate" class="pdoc-button"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke-linecap='round' stroke="currentColor" stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg></label>
         <input id="togglestate" type="checkbox" aria-hidden="true" tabindex="-1">
-        <div>
+        <div>            <a class="pdoc-button module-list-button" href="../belvo.html">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-left" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M10 3.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 1 1 0v2A1.5 1.5 0 0 1 9.5 14h-8A1.5 1.5 0 0 1 0 12.5v-9A1.5 1.5 0 0 1 1.5 2h8A1.5 1.5 0 0 1 11 3.5v2a.5.5 0 0 1-1 0v-2z"/>
+  <path fill-rule="evenodd" d="M4.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H14.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
+</svg>                &nbsp;belvo</a>
+
 
             <input type="search" placeholder="Search..." role="searchbox" aria-label="search"
                    pattern=".+" required>
 
-        <h2>Contents</h2>
-        <ul>
-  <li><a href="#documentation">📕 Documentation</a></li>
-  <li><a href="#requirements">📋 Requirements</a></li>
-  <li><a href="#getting-started">🚀 Getting started</a></li>
-  <li><a href="#usage-create-link-via-widget">Usage (create link via widget)</a></li>
-  <li><a href="#usage-create-link-via-sdk">Usage (create link via SDK)</a></li>
-  <li><a href="#errors-and-exceptions">Errors and exceptions</a></li>
-  <li><a href="#development">🐍 Development</a></li>
-  <li><a href="#contributing">👥 Contributing</a></li>
-</ul>
-
 
         <h2>Submodules</h2>
         <ul>
-                <li><a href="belvo/client.html">client</a></li>
-                <li><a href="belvo/enums.html">enums</a></li>
-                <li><a href="belvo/exceptions.html">exceptions</a></li>
-                <li><a href="belvo/http.html">http</a></li>
-                <li><a href="belvo/investments.html">investments</a></li>
-                <li><a href="belvo/resources.html">resources</a></li>
-                <li><a href="belvo/utils.html">utils</a></li>
+                <li><a href="resources/accounts.html">accounts</a></li>
+                <li><a href="resources/balances.html">balances</a></li>
+                <li><a href="resources/base.html">base</a></li>
+                <li><a href="resources/incomes.html">incomes</a></li>
+                <li><a href="resources/institutions.html">institutions</a></li>
+                <li><a href="resources/invoices.html">invoices</a></li>
+                <li><a href="resources/links.html">links</a></li>
+                <li><a href="resources/owners.html">owners</a></li>
+                <li><a href="resources/recurring_expenses.html">recurring_expenses</a></li>
+                <li><a href="resources/risk_insights.html">risk_insights</a></li>
+                <li><a href="resources/statements.html">statements</a></li>
+                <li><a href="resources/tax_compliance_status.html">tax_compliance_status</a></li>
+                <li><a href="resources/tax_returns.html">tax_returns</a></li>
+                <li><a href="resources/tax_status.html">tax_status</a></li>
+                <li><a href="resources/transactions.html">transactions</a></li>
+                <li><a href="resources/widget_token.html">widget_token</a></li>
         </ul>
 
 
@@ -57,160 +59,30 @@
     <main class="pdoc">
             <section class="module-info">
                     <h1 class="modulename">
-belvo    </h1>
+<a href="./../belvo.html">belvo</a><wbr>.resources    </h1>
 
-                        <div class="docstring"><h1 align="center">Belvo Python SDK</h1>
+                
+                        <input id="resources-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
 
-<p align="center">
-    <a href="https://pypi.org/project/belvo-python/"><img alt="PyPI" src="https://img.shields.io/pypi/v/belvo-python?style=for-the-badge"></a>
-    <a href="https://pypistats.org/packages/belvo-python"><img alt="PyPI - Downloads" src="https://img.shields.io/pypi/dm/belvo-python?style=for-the-badge"></a>
-    <a href="https://app.circleci.com/pipelines/github/belvo-finance/belvo-python"><img alt="CircleCI (.com)" src="https://img.shields.io/travis/com/belvo-finance/belvo-python/master?style=for-the-badge"></a>
-    <a href="https://coveralls.io/github/belvo-finance/belvo-python"><img alt="Coveralls github" src="https://img.shields.io/coveralls/github/belvo-finance/belvo-python?style=for-the-badge"></a>
-    <a href="https://github.com/psf/black"><img alt="Coveralls github" src="https://img.shields.io/badge/code%20style-black-000000.svg?style=for-the-badge"></a>
-</p>
+                        <label class="view-source-button" for="resources-view-source"><span>View Source</span></label>
 
-<h2 id="documentation">📕 Documentation</h2>
-
-<p>How to use <code>belvo-python</code>: https://belvo-finance.github.io/belvo-python/</p>
-
-<p>If you want to check the full documentation about Belvo API: https://docs.belvo.com</p>
-
-<p>Or if you want to more information about:</p>
-
-<ul>
-<li><a href="https://developers.belvo.com/docs/get-your-belvo-api-keys">Getting Belvo API keys</a></li>
-<li><a href="https://developers.belvo.com/docs/connect-widget">Using Connect Widget</a></li>
-<li><a href="https://developers.belvo.com/docs/test-in-sandbox">Testing in sandbox</a></li>
-<li><a href="https://developers.belvo.com/docs/webhooks">Using webhooks and recurrent links</a></li>
-</ul>
-
-<h2 id="requirements">📋 Requirements</h2>
-
-<ul>
-<li>Python 3.6+</li>
-</ul>
-
-<h2 id="getting-started">🚀 Getting started</h2>
-
-<p>Install using <code>pip</code>:</p>
-
-<pre><code>$ pip install belvo-python
-</code></pre>
-
-<h2 id="usage-create-link-via-widget">Usage (create link via widget)</h2>
-
-<p>When your user successfully links their account using the <a href="https://developers.belvo.com/docs/connect-widget">Connect Widget</a>, your implemented callback funciton will return the <code>link_id</code> required to make further API to retrieve information.</p>
-
-<div class="pdoc-code codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pprint</span>
-
-<span class="kn">from</span> <span class="nn"><a href="belvo/client.html">belvo.client</a></span> <span class="kn">import</span> <span class="n">Client</span>
-<span class="kn">from</span> <span class="nn"><a href="belvo/enums.html">belvo.enums</a></span> <span class="kn">import</span> <span class="n">AccessMode</span>
-
-<span class="c1"># Login to Belvo API</span>
-<span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="s2">&quot;your-secret-key-id&quot;</span><span class="p">,</span> <span class="s2">&quot;your-secret-key&quot;</span><span class="p">,</span> <span class="s2">&quot;sandbox&quot;</span><span class="p">)</span>
-
-<span class="c1"># Get the link_id from the result of your widget callback function</span>
-<span class="n">link_id</span> <span class="o">=</span> <span class="n">result_from_callback_function</span><span class="o">.</span><span class="n">id</span>
-
-<span class="c1"># Get all accounts</span>
-<span class="n">client</span><span class="o">.</span><span class="n">Accounts</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">link</span><span class="o">=</span><span class="n">link_id</span><span class="p">)</span>
-
-<span class="c1"># Pretty print all checking accounts</span>
-<span class="k">for</span> <span class="n">account</span> <span class="ow">in</span> <span class="n">client</span><span class="o">.</span><span class="n">Accounts</span><span class="o">.</span><span class="n">list</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s2">&quot;checking&quot;</span><span class="p">):</span>
-    <span class="n">pprint</span><span class="p">(</span><span class="n">account</span><span class="p">)</span>
-</code></pre></div>
-
-<h2 id="usage-create-link-via-sdk">Usage (create link via SDK)</h2>
-
-<p>You can also manually create the link using the SDK. However, for security purposes, we highly recommend, that you use the <a href="https://developers.belvo.com/docs/connect-widget">Connect Widget</a> to create the link and follow the <strong>Usage (create link via widget)</strong> example.</p>
-
-<div class="pdoc-code codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pprint</span>
-
-<span class="kn">from</span> <span class="nn"><a href="belvo/client.html">belvo.client</a></span> <span class="kn">import</span> <span class="n">Client</span>
-<span class="kn">from</span> <span class="nn"><a href="belvo/enums.html">belvo.enums</a></span> <span class="kn">import</span> <span class="n">AccessMode</span>
-
-<span class="c1"># Login to Belvo API</span>
-<span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="s2">&quot;your-secret-key-id&quot;</span><span class="p">,</span> <span class="s2">&quot;your-secret-key&quot;</span><span class="p">,</span> <span class="s2">&quot;sandbox&quot;</span><span class="p">)</span>
-
-<span class="c1"># Register a link </span>
-<span class="n">link</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">Links</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
-    <span class="n">institution</span><span class="o">=</span><span class="s2">&quot;erebor_mx_retail&quot;</span><span class="p">,</span>
-    <span class="n">username</span><span class="o">=</span><span class="s2">&quot;johndoe&quot;</span><span class="p">,</span>
-    <span class="n">password</span><span class="o">=</span><span class="s2">&quot;supersecret&quot;</span><span class="p">,</span>
-    <span class="n">access_mode</span><span class="o">=</span><span class="n">AccessMode</span><span class="o">.</span><span class="n">SINGLE</span>
-<span class="p">)</span>
-
-<span class="c1"># Get all accounts</span>
-<span class="n">client</span><span class="o">.</span><span class="n">Accounts</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">link</span><span class="o">=</span><span class="n">link</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
-
-<span class="c1"># Pretty print all checking accounts</span>
-<span class="k">for</span> <span class="n">account</span> <span class="ow">in</span> <span class="n">client</span><span class="o">.</span><span class="n">Accounts</span><span class="o">.</span><span class="n">list</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s2">&quot;checking&quot;</span><span class="p">):</span>
-    <span class="n">pprint</span><span class="p">(</span><span class="n">account</span><span class="p">)</span>
-</code></pre></div>
-
-<h2 id="errors-and-exceptions">Errors and exceptions</h2>
-
-<p>By default, when you use our SDK, we automatically return the <a href="https://developers.belvo.com/docs/integration-overview#error-handling">error</a>. However, if you prefer to receive the exception, you need to set the <code>raise_exception</code> optional parameter to <code>True</code>.</p>
-
-<div class="pdoc-code codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pprint</span>
-<span class="kn">from</span> <span class="nn"><a href="belvo/client.html">belvo.client</a></span> <span class="kn">import</span> <span class="n">Client</span>
-<span class="kn">from</span> <span class="nn"><a href="belvo/enums.html">belvo.enums</a></span> <span class="kn">import</span> <span class="n">AccessMode</span>
-<span class="kn">from</span> <span class="nn"><a href="belvo/exceptions.html">belvo.exceptions</a></span> <span class="kn">import</span> <span class="n">RequestError</span>
-
-<span class="c1"># Login to Belvo API</span>
-<span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="s2">&quot;my-secret-key-id&quot;</span><span class="p">,</span> <span class="s2">&quot;my-secret-key&quot;</span><span class="p">,</span> <span class="s2">&quot;sandbox&quot;</span><span class="p">)</span>
-
-<span class="k">try</span><span class="p">:</span>
-    <span class="c1"># Register a link</span>
-    <span class="n">link</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">Links</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
-        <span class="n">access_mode</span><span class="o">=</span><span class="n">AccessMode</span><span class="o">.</span><span class="n">SINGLE</span><span class="p">,</span>
-        <span class="n">institution</span><span class="o">=</span><span class="s2">&quot;erebor_mx_retail&quot;</span><span class="p">,</span>
-        <span class="n">username</span><span class="o">=</span><span class="s2">&quot;&lt;username&gt;&quot;</span><span class="p">,</span>
-        <span class="n">password</span><span class="o">=</span><span class="s2">&quot;&lt;pass&gt;&quot;</span><span class="p">,</span>
-        <span class="n">raise_exception</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="c1"># Set this optional paramter</span>
-    <span class="p">)</span>
-<span class="k">except</span> <span class="n">RequestError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-    <span class="c1"># do something with the error</span>
-    <span class="n">pprint</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="c1"># do something with the link</span>
-    <span class="n">pprint</span><span class="p">(</span><span class="n">link</span><span class="p">)</span>
-</code></pre></div>
-
-<h2 id="development">🐍 Development</h2>
-
-<p>To release a new version of the SDK to PyPI:</p>
-
-<ul>
-<li>Create a new branch from master.</li>
-<li>Use <code>make new-version major|minor|patch</code> to bump a new version.</li>
-<li>Create a new pull request for the new version.</li>
-<li>Once the new version is merged in <code>master</code>, create a <code>tag</code> matching the new version.</li>
-</ul>
-
-<h2 id="contributing">👥 Contributing</h2>
-
-<p><strong>Anyone</strong> can do something to make <code>belvo-python</code> better, so contributors are always welcome!
-If you wish to submit a pull request, please be sure check the items on this list:</p>
-
-<ul>
-<li><input type="checkbox" class="task-list-item-checkbox" disabled> Tests related to the changed code were executed</li>
-<li><input type="checkbox" class="task-list-item-checkbox" disabled> The source code has been coded following the OWASP security best practices (https://owasp.org/www-pdf-archive/OWASP_SCP_Quick_Reference_Guide_v2.pdf).</li>
-<li><input type="checkbox" class="task-list-item-checkbox" disabled> Commit message properly labeled</li>
-<li><input type="checkbox" class="task-list-item-checkbox" disabled> There is a ticket associated to each PR. </li>
-</ul>
-
-<p>For more details about contributing to this project, please take a look to our <a href="CONTRIBUTING.md">guidelines</a>. </p>
-</div>
-
-                        <input id="belvo-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
-
-                        <label class="view-source-button" for="belvo-view-source"><span>View Source</span></label>
-
-                        <div class="pdoc-code codehilite"><pre><span></span><span id="L-1"><a href="#L-1"><span class="linenos">1</span></a><span class="sd">&quot;&quot;&quot;</span>
-</span><span id="L-2"><a href="#L-2"><span class="linenos">2</span></a><span class="sd">.. include:: ../README.md</span>
-</span><span id="L-3"><a href="#L-3"><span class="linenos">3</span></a><span class="sd">&quot;&quot;&quot;</span>
-</span><span id="L-4"><a href="#L-4"><span class="linenos">4</span></a><span class="n">__version__</span> <span class="o">=</span> <span class="s2">&quot;0.32.1&quot;</span>
+                        <div class="pdoc-code codehilite"><pre><span></span><span id="L-1"><a href="#L-1"><span class="linenos"> 1</span></a><span class="kn">from</span> <span class="nn">belvo.investments.portfolios</span> <span class="kn">import</span> <span class="n">InvestmentsPortfolios</span>  <span class="c1"># noqa</span>
+</span><span id="L-2"><a href="#L-2"><span class="linenos"> 2</span></a><span class="kn">from</span> <span class="nn">belvo.investments.transactions</span> <span class="kn">import</span> <span class="n">InvestmentsTransactions</span>  <span class="c1"># noqa</span>
+</span><span id="L-3"><a href="#L-3"><span class="linenos"> 3</span></a><span class="kn">from</span> <span class="nn">belvo.resources.accounts</span> <span class="kn">import</span> <span class="n">Accounts</span>  <span class="c1"># noqa</span>
+</span><span id="L-4"><a href="#L-4"><span class="linenos"> 4</span></a><span class="kn">from</span> <span class="nn">belvo.resources.balances</span> <span class="kn">import</span> <span class="n">Balances</span>  <span class="c1"># noqa</span>
+</span><span id="L-5"><a href="#L-5"><span class="linenos"> 5</span></a><span class="kn">from</span> <span class="nn">belvo.resources.incomes</span> <span class="kn">import</span> <span class="n">Incomes</span>  <span class="c1"># noqa</span>
+</span><span id="L-6"><a href="#L-6"><span class="linenos"> 6</span></a><span class="kn">from</span> <span class="nn">belvo.resources.institutions</span> <span class="kn">import</span> <span class="n">Institutions</span>  <span class="c1"># noqa</span>
+</span><span id="L-7"><a href="#L-7"><span class="linenos"> 7</span></a><span class="kn">from</span> <span class="nn">belvo.resources.invoices</span> <span class="kn">import</span> <span class="n">Invoices</span>  <span class="c1"># noqa</span>
+</span><span id="L-8"><a href="#L-8"><span class="linenos"> 8</span></a><span class="kn">from</span> <span class="nn">belvo.resources.links</span> <span class="kn">import</span> <span class="n">Links</span>  <span class="c1"># noqa</span>
+</span><span id="L-9"><a href="#L-9"><span class="linenos"> 9</span></a><span class="kn">from</span> <span class="nn">belvo.resources.owners</span> <span class="kn">import</span> <span class="n">Owners</span>  <span class="c1"># noqa</span>
+</span><span id="L-10"><a href="#L-10"><span class="linenos">10</span></a><span class="kn">from</span> <span class="nn">belvo.resources.recurring_expenses</span> <span class="kn">import</span> <span class="n">RecurringExpenses</span>  <span class="c1"># noqa</span>
+</span><span id="L-11"><a href="#L-11"><span class="linenos">11</span></a><span class="kn">from</span> <span class="nn">belvo.resources.risk_insights</span> <span class="kn">import</span> <span class="n">RiskInsights</span>  <span class="c1"># noqa</span>
+</span><span id="L-12"><a href="#L-12"><span class="linenos">12</span></a><span class="kn">from</span> <span class="nn">belvo.resources.statements</span> <span class="kn">import</span> <span class="n">Statements</span>  <span class="c1"># noqa</span>
+</span><span id="L-13"><a href="#L-13"><span class="linenos">13</span></a><span class="kn">from</span> <span class="nn">belvo.resources.tax_compliance_status</span> <span class="kn">import</span> <span class="n">TaxComplianceStatus</span>  <span class="c1"># noqa</span>
+</span><span id="L-14"><a href="#L-14"><span class="linenos">14</span></a><span class="kn">from</span> <span class="nn">belvo.resources.tax_returns</span> <span class="kn">import</span> <span class="n">TaxReturns</span>  <span class="c1"># noqa</span>
+</span><span id="L-15"><a href="#L-15"><span class="linenos">15</span></a><span class="kn">from</span> <span class="nn">belvo.resources.tax_status</span> <span class="kn">import</span> <span class="n">TaxStatus</span>  <span class="c1"># noqa</span>
+</span><span id="L-16"><a href="#L-16"><span class="linenos">16</span></a><span class="kn">from</span> <span class="nn">belvo.resources.transactions</span> <span class="kn">import</span> <span class="n">Transactions</span>  <span class="c1"># noqa</span>
+</span><span id="L-17"><a href="#L-17"><span class="linenos">17</span></a><span class="kn">from</span> <span class="nn">belvo.resources.widget_token</span> <span class="kn">import</span> <span class="n">WidgetToken</span>  <span class="c1"># noqa</span>
 </span></pre></div>
 
 
@@ -268,7 +140,7 @@ If you wish to submit a pull request, please be sure check the items on this lis
                 script.async = true;
                 script.onload = () => resolve(window.pdocSearch);
                 script.onerror = (e) => reject(e);
-                script.src = "search.js";
+                script.src = "../search.js";
                 document.getElementsByTagName("head")[0].appendChild(script);
             });
         } catch (e) {
@@ -310,7 +182,7 @@ If you wish to submit a pull request, please be sure check the items on this lis
             }
             for (let result of results.slice(0, 10)) {
                 let doc = result.doc;
-                let url = `${doc.modulename.replaceAll(".", "/")}.html`;
+                let url = `../${doc.modulename.replaceAll(".", "/")}.html`;
                 if (doc.qualname) {
                     url += `#${doc.qualname}`;
                 }
