@@ -345,14 +345,20 @@ link = client.Links.resume(
 
 </code></pre>
 
-<p>Args:
-    session (str): The session you want to resume (UUID).
-    token (str): The MFA token required to continue the session.
-    link (str, optional): The Link ID . Defaults to None.
-    raise_exception (bool, optional): Boolean indicating whether to return an API error or to raise an exception. Defaults to False.</p>
+<h6 id="args">Args</h6>
 
-<p>Returns:
-    Union[List[Dict], Dict]: On success, returns the resource data requests.</p>
+<ul>
+<li><strong>session (str):</strong>  The session you want to resume (UUID).</li>
+<li><strong>token (str):</strong>  The MFA token required to continue the session.</li>
+<li><strong>link (str, optional):</strong>  The Link ID . Defaults to None.</li>
+<li><strong>raise_exception (bool, optional):</strong>  Boolean indicating whether to return an API error or to raise an exception. Defaults to False.</li>
+</ul>
+
+<h6 id="returns">Returns</h6>
+
+<blockquote>
+  <p>Union[List[Dict], Dict]: On success, returns the resource data requests.</p>
+</blockquote>
 </div>
 
 

@@ -417,11 +417,17 @@ accounts = client.Accounts.list(type__in="checking", balance_available__gte=100)
 
 <p>You can find the filters, along with examples, that you can apply per resource by checking our API reference documentation. For example, if you want to see the filters you can apply to the Links resource, then see our <a href="https://developers.belvo.com/reference/listlinks">List all links documentation</a>.</p>
 
-<p>Returns:
-    _type_: _description_</p>
+<h6 id="returns">Returns</h6>
 
-<p>Yields:
-    Generator: _description_</p>
+<blockquote>
+  <p>_type_: _description_</p>
+</blockquote>
+
+<h6 id="yields">Yields</h6>
+
+<blockquote>
+  <p>Generator: _description_</p>
+</blockquote>
 </div>
 
 
@@ -452,11 +458,17 @@ accounts = client.Accounts.list(type__in="checking", balance_available__gte=100)
 
             <div class="docstring"><h1 id="get-the-details-for-a-specific-object">Get the details for a specific object</h1>
 
-<p>Args:
-    id (str): The ID of the item you want to get details for (UUID).</p>
+<h6 id="args">Args</h6>
 
-<p>Returns:
-    Dict: The details of the object.</p>
+<ul>
+<li><strong>id (str):</strong>  The ID of the item you want to get details for (UUID).</li>
+</ul>
+
+<h6 id="returns">Returns</h6>
+
+<blockquote>
+  <p>Dict: The details of the object.</p>
+</blockquote>
 </div>
 
 
@@ -506,11 +518,17 @@ client.Accounts.delete("161a5e4d-67f5-4760-ae4f-c1fe85cb20ca")
 
 </code></pre>
 
-<p>Args:
-    id (str): The id of the object to delete.</p>
+<h6 id="args">Args</h6>
 
-<p>Returns:
-    bool: Returns <code>True</code> if the object was deleted.</p>
+<ul>
+<li><strong>id (str):</strong>  The id of the object to delete.</li>
+</ul>
+
+<h6 id="returns">Returns</h6>
+
+<blockquote>
+  <p>bool: Returns <code>True</code> if the object was deleted.</p>
+</blockquote>
 </div>
 
 
@@ -583,14 +601,20 @@ link = client.Links.resume(
 
 </code></pre>
 
-<p>Args:
-    session (str): The session you want to resume (UUID).
-    token (str): The MFA token required to continue the session.
-    link (str, optional): The Link ID . Defaults to None.
-    raise_exception (bool, optional): Boolean indicating whether to return an API error or to raise an exception. Defaults to False.</p>
+<h6 id="args">Args</h6>
 
-<p>Returns:
-    Union[List[Dict], Dict]: On success, returns the resource data requests.</p>
+<ul>
+<li><strong>session (str):</strong>  The session you want to resume (UUID).</li>
+<li><strong>token (str):</strong>  The MFA token required to continue the session.</li>
+<li><strong>link (str, optional):</strong>  The Link ID . Defaults to None.</li>
+<li><strong>raise_exception (bool, optional):</strong>  Boolean indicating whether to return an API error or to raise an exception. Defaults to False.</li>
+</ul>
+
+<h6 id="returns">Returns</h6>
+
+<blockquote>
+  <p>Union[List[Dict], Dict]: On success, returns the resource data requests.</p>
+</blockquote>
 </div>
 
 

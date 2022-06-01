@@ -318,18 +318,24 @@
 <span class="p">)</span>
 </code></pre></div>
 
-<p>Args:
-    link (str): The fiscal <code>link.id</code> that you want to get information for (UUID).
-    date_from (str): Date from which you want to start receiving invoices for, in <code>YYYY-MM-DD</code> format. The value of <code>date_from</code> cannot be greater than <code>date_to</code>.
-    date_to (str, optional): Date that you want to stop receiving invoirces for, in <code>YYYY-MM-DD</code> format. The value of <code>date_to</code> cannot be greater than today's date (in other words, no future dates).
-    type_ (str): The direction of the invoice (from the perspective of the Link owner). Can be either <code>OUTFLOW</code> OR <code>INFLOW</code>.
-    attach_xml (bool, optional): When set to <code>True</code>, you will receive the XML invoice in the response. Defaults to False.
-    encryption_key (str, optional): Deprecated. Defaults to None.
-     save_data (bool, optional): Indicates whether or not to persist the data in Belvo. Defaults to <code>True</code>.
-    raise_exception (bool, optional): Indicates whether to raise an exception or return the API error. Defaults to <code>False</code>.</p>
+<h6 id="args">Args</h6>
 
-<p>Returns:
-    Union[List[Dict], Dict]: For more information on the response from the API, see our <a href="https://developers.belvo.com/reference/retrieveinvoices">Invoices API documentation</a>.</p>
+<ul>
+<li><strong>link (str):</strong>  The fiscal <code>link.id</code> that you want to get information for (UUID).</li>
+<li><strong>date_from (str):</strong>  Date from which you want to start receiving invoices for, in <code>YYYY-MM-DD</code> format. The value of <code>date_from</code> cannot be greater than <code>date_to</code>.</li>
+<li><strong>date_to (str, optional):</strong>  Date that you want to stop receiving invoirces for, in <code>YYYY-MM-DD</code> format. The value of <code>date_to</code> cannot be greater than today's date (in other words, no future dates).</li>
+<li><strong>type_ (str):</strong>  The direction of the invoice (from the perspective of the Link owner). Can be either <code>OUTFLOW</code> OR <code>INFLOW</code>.</li>
+<li><strong>attach_xml (bool, optional):</strong>  When set to <code>True</code>, you will receive the XML invoice in the response. Defaults to False.</li>
+<li><strong>encryption_key (str, optional):</strong>  Deprecated. Defaults to None.
+save_data (bool, optional): Indicates whether or not to persist the data in Belvo. Defaults to <code>True</code>.</li>
+<li><strong>raise_exception (bool, optional):</strong>  Indicates whether to raise an exception or return the API error. Defaults to <code>False</code>.</li>
+</ul>
+
+<h6 id="returns">Returns</h6>
+
+<blockquote>
+  <p>Union[List[Dict], Dict]: For more information on the response from the API, see our <a href="https://developers.belvo.com/reference/retrieveinvoices">Invoices API documentation</a>.</p>
+</blockquote>
 </div>
 
 
@@ -374,14 +380,20 @@ link = client.Links.resume(
 
 </code></pre>
 
-<p>Args:
-    session (str): The session you want to resume (UUID).
-    token (str): The MFA token required to continue the session.
-    link (str, optional): The Link ID . Defaults to None.
-    raise_exception (bool, optional): Boolean indicating whether to return an API error or to raise an exception. Defaults to False.</p>
+<h6 id="args">Args</h6>
 
-<p>Returns:
-    Union[List[Dict], Dict]: On success, returns the resource data requests.</p>
+<ul>
+<li><strong>session (str):</strong>  The session you want to resume (UUID).</li>
+<li><strong>token (str):</strong>  The MFA token required to continue the session.</li>
+<li><strong>link (str, optional):</strong>  The Link ID . Defaults to None.</li>
+<li><strong>raise_exception (bool, optional):</strong>  Boolean indicating whether to return an API error or to raise an exception. Defaults to False.</li>
+</ul>
+
+<h6 id="returns">Returns</h6>
+
+<blockquote>
+  <p>Union[List[Dict], Dict]: On success, returns the resource data requests.</p>
+</blockquote>
 </div>
 
 
