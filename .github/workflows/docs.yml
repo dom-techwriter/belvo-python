@@ -18,7 +18,7 @@ jobs:
       - name: Install all dependencies (pdoc + more)
         run: pip install pdoc
       - name: Build docs into docs/ folder
-        run: pdoc belvo -o docs
+        run: pdoc ./belvo -o docs
       - name: Deploy docs to gh-pages branch
         uses: peaceiris/actions-gh-pages@v3
         with:
