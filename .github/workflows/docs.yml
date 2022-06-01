@@ -11,8 +11,10 @@ jobs:
     steps:
       - name: Checkout Belvo Python SDK repo
         uses: actions/checkout@v2
-      - name: Set up Ruby
+      - name: Set up Python
         uses: actions/setup-python@v3
+      - name: Install requests
+        run: pip install requests
       - name: Install all dependencies (pdoc + more)
         run: pip install pdoc
       - name: Build docs into docs/ folder
